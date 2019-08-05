@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>09-event.html</title>
+			<script type = "text/javascript">
+				function sum(x,y) {
+					var z = x + y;
+					return z;
+				}
+				
+				function printResult(){
+					var result = sum(10, 50);
+					var mytag = document.getElementById("question");
+					//문서에서 "question"이란 ID를 가진 엘리멘트를 가져옴
+					
+					mytag.innerHTML = result;
+				}
+				
+				function printResult2(){
+					var result = sum(10, 50);
+					var mytag = document.getElementById("question2");
+					//문서에서 "question2"이란 ID를 가진 엘리멘트를 가져옴
+					
+					mytag.innerHTML = result;
+				}
+				
+				function printResultOut2(){
+					var result = "?";
+					var mytag = document.getElementById("question2");
+					//문서에서 "question2"이란 ID를 가진 엘리멘트를 가져옴
+					
+					mytag.innerHTML = result;
+				}
+				
+				function printResult3(){
+					var result = sum(10, 50);
+					var mytag = document.getElementById("question3");
+					//문서에서 "question2"이란 ID를 가진 엘리멘트를 가져옴
+					mytag.innerHTML = result;
+				}
+				
+				function insertQuestion(){
+					var q = prompt("사칙연산의 수식을 입력하세요 (예 : 100+50)", "");
+					var answer = eavl(q);
+					var result = q + "=" + answer;
+					document.getElementId("question3").innerHTML = result;
+				}
+				
+			</script>
+	</head>
+	<body onload = "insertQuestion()">
+		<h1> 10+50 = <span id="question">?</span></h1>
+		<input type = "button" value = "결과보기" onclick = "printResult()"/><br/>
+		결과보기 버튼을 누르면 onclick에 연결된 printReuslt()함수를 실행.<br/>
+		-> mytag 변수가 getElementById를 통해 id가 question인 변수를 가져감<br/>
+		-> mytag로 result 값을 집어넣음<br/><br/>
+		
+		<h1 onmouseover="printResult2()" onmouseout="printResultOut2()"> 10+50 = <span id="question2">?</span></h1>
+
+		<h1 id="question3"></h1>
+		
+		
+	</body>
+</html>

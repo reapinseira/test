@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>10-whyonload.html</title>
+			<script type = "text/javascript">
+			function doPrint(num){
+					var msg = "doPrint()가 " + num + "회 실행되었습니다.";
+					alert(msg);
+					document.getElementById("myid").innerHTML = msg;
+			}
+			//doPrint(1);
+		</script>
+													
+			
+	</head>
+	<body onload = "doPrint(3)">
+		<h1 id="myid">안녕하세요</h1>
+		
+		아직 읽지못한 코드는  인식할 수 없으므로 바디 바로 위에 스크립트를 두는게 좋다.
+		
+	</body>
+</html>

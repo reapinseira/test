@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>03-operator.html</title>
+	<script type="text/javascript">
+	
+		var num1 = 100+30;
+		var num2 = 100-30;
+		var num3 = 100*30;
+		var num4 = 100/30;
+		//연산 결과 3.3333333333333335 : 자바 스크립트의 고질적 오류.
+		//정밀한 계산 결과가 필요한 경우엔 주의할것
+		
+		var num5 = 100%30;
+		var num6 = 100+30*(2-1);
+		
+		alert(num1);
+		alert(num2);
+		alert(num3);
+		alert(num4);
+		alert(num5);
+		alert(num6);
+		
+		var num;
+		num += 5;
+		num -= 5;
+		num *= 5;
+		num /= 5;
+		num %= 5;
+		//축약 표현 가능. ++ --도 가능.	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>12.window.html</title>
+			<script type = "text/javascript">
+			function open1(){
+				window.open("11-open.html")
+			}
+			
+			function open2(){
+				window.open('11-open.html', 'mypage', width=300, height=500);
+				//mypage : 새로 띄울 창 이름. 지정하지 않으면 클릭할때마다 새 창을 열고, 이름을 지정하면 한번만 열린다
+				
+			}
+			
+			function open3(){
+				window.open('09-event.html', 'mywin', width=300, height=500);
+			}
+				
+			</script>
+	</head>
+	<body>
+		<a href = "#" onclick="open1(); return false;">새탭 열기</a><br/><br/>
+		<a href = "#" onclick="open2(); return false;">새창 열기</a><br/><br/>
+		
+		<a href = "#" onclick="open3(); return false;">새창 열기</a>
+	</body>
+</html>

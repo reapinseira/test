@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>04-function.html</title>
+		<script type = "text/javascript">
+				//함수의 선언
+			function sayHello(){
+				document.write("<h1>안녕하세요</h1>");
+				document.write("<h2>자바스크립트</h2>");
+				//document.write : body 부분에 출력
+			}
+			
+			sayHello();
+			
+			sayHello();
+			
+			function sum(x, y){
+				var z = x+y;
+				return z;
+			}
+			
+			function sumInt(x, y){
+				var isStrx = !isNaN(x);
+				var isStry = !isNaN(y);
+				
+				if(!isStrx || !isStry){
+					//둘 중 하나라도 숫자가 아니면 = false라면
+					return "숫자를 주세요";
+				}
+				
+				var z = parseInt(x)+parseInt(y);
+				//문자열로 된 숫자가 오는 것을 방지하기 위해
+				return z;
+			}
+			//함수 안에서 다른 함수 호출 가능
+			function printReuslt(x, y){
+				var result = sum(x, y);
+				document.write("<h3>"+result+"</h3>")
+			}
+			
+			function printReusltInt(x, y){
+				var result = sumInt(x, y);
+				document.write("<h3>"+result+"</h3>")
+			}
+			
+			printReuslt(5,8);
+			printReuslt("삼", 5);
+			printReuslt("삼", "오");
+			
+			printReusltInt(5, 8);
+			printReusltInt("3", 5);
+			printReusltInt("삼", "오");
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
